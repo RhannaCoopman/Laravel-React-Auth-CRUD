@@ -11,18 +11,29 @@ export default function Login() {
   const [message, setMessage] = useState(null)
 
   const onSubmit = ev => {
-    ev.preventDefault()
+    ev.preventDefault();
+
+    console.log(1);
 
     const payload = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     }
+
+    console.log(2);
+
     axiosClient.post('/login', payload)
       .then(({data}) => {
+        console.log(3);
+
         setUser(data.user)
         setToken(data.token);
+        console.log(4);
+
       })
       .catch((err) => {
+        console.log(5);
+
         const response = err.response;
         if (response && response.status === 422) {
           setMessage(response.data.message)

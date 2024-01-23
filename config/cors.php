@@ -15,11 +15,11 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', '*'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000', 'https://laravel-react-auth-crud.vercel.app', 'laravel-react-auth-crud-git-main-rhannacoopman.vercel.app', 'laravel-react-auth-crud-l4mq8nysh-rhannacoopman.vercel.app'],
+    'allowed_origins' => ['*', 'http://localhost:3000','https://laravel-react-auth-crud-l4mq8nysh-rhannacoopman.vercel.app', 'https://laravel-react-auth-crud.vercel.app', 'laravel-react-auth-crud-git-main-rhannacoopman.vercel.app', 'laravel-react-auth-crud-l4mq8nysh-rhannacoopman.vercel.app'],
 
     'allowed_origins_patterns' => [],
 
